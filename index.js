@@ -7,6 +7,9 @@ const url="mongodb+srv://Anilreddy_2009:Anilreddys1@cluster0.ili4rd0.mongodb.net
 mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true});
 const con=mongoose.connection
 app.use(express.json())
+app.get("/",(req,res)=>{
+    res.send('working');
+})
 app.use("/news",router)
 con.on('open',()=>{
     console.log('connected....')
