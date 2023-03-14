@@ -14,11 +14,10 @@ router.get("/",async(req,res)=>{
 
 router.post("/",async(req,res)=>{
     const news=new News({
-        author:req.body.author,
-        title:req.body.title,
+         title:req.body.title,
         description:req.body.description,
-        imgUrl:req.body.imgUrl,
-        content:req.body.content
+        url:req.body.url,
+        urlToImage:req.body.urlToImage
     })
     try{
         const n1=await news.save();
