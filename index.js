@@ -10,11 +10,10 @@ app.use(express.json())
 app.get("/",(req,res)=>{
     res.send('working');
 })
-app.use("/news",router)
 con.on('open',()=>{
     console.log('connected....')
 })
-
+app.use("/news",router)
 app.listen(9000,()=>{
     console.log("server started");
 })
