@@ -1,5 +1,6 @@
 const express=require ("express");
 const mongoose=require ("mongoose");
+const Cors=require ("cors");
 const News=require('./newsModel');
 const app=express();
 const url="mongodb+srv://Anilreddy_2009:Anilreddys1@cluster0.mgsx3oj.mongodb.net/?retryWrites=true&w=majority";
@@ -7,6 +8,7 @@ const url="mongodb+srv://Anilreddy_2009:Anilreddys1@cluster0.mgsx3oj.mongodb.net
 mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true});
 const con=mongoose.connection
 app.use(express.json())
+app.use(Cors())
 app.get("/",(req,res)=>{
     res.send('working');
 })
