@@ -1,11 +1,7 @@
 const mongoose=require ("mongoose");
 
 const newsSchema=new mongoose.Schema({
-    author:{
-        type:String,
-        require:true
-    },
-    title:{
+  title:{
         type:String,
         require:true
     },
@@ -13,11 +9,11 @@ const newsSchema=new mongoose.Schema({
         type:String,
         require:true
     },
-    imgUrl:{
+    url:{
         type:String,
         require:true
     },
-    content:{
+    urlToImage:{
         type:String,
         require:true
     }
