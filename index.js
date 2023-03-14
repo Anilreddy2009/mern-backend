@@ -13,7 +13,7 @@ app.get("/",(req,res)=>{
 con.on('open',()=>{
     console.log('connected....')
 })
-app.use("/news",router)
+app.use("/n/news",router)
 app.listen(9000,()=>{
     console.log("server started");
 })
